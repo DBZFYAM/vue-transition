@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script src="./node_modules/vue-router/dist/vue-router.js"></script>
+    <style>
+    .page-enter {
+        z-index: 20002;
+        -webkit-animation: pageFromRightToCenter 800ms forwards;
+        -o-animation: pageFromRightToCenter 800ms forwards;
+        animation: pageFromRightToCenter 800ms forward
+    }
+    .page-leave {
+        z-index: 2001;
+        -webkit-animation: pageFromCenterToLeft 800ms forwards;
+        -o-animation: pageFromCenterToLeft 800ms forwards;
+        animation: pageFromCenterToLeft 800ms forwards
+    }
+    .page-back-enter {
+        z-index: 2001;
+        -webkit-animation: pageFromLeftToCenter 400ms forwards;
+        -o-animation: pageFromLeftToCenter 400ms forwards;
+        animation: pageFromLeftToCenter 400ms forward
+    }
+    .page-back-leave {
+        z-index: 20002;
+        -webkit-animation: pageFromCenterToRight 400ms forwards;
+        -o-animation: pageFromCenterToRight 400ms forwards;
+        animation: pageFromCenterToRight 400ms forwards
+    }
+
+    @-webkit-keyframes pageFromRightToCenter {
+      from {
+        -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+        opacity: .9;
+      }
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+    @keyframes pageFromRightToCenter {
+      from {
+        -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+        opacity: .9;
+      }
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+    @-webkit-keyframes pageFromCenterToRight {
+      from {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+      to {
+        -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+        opacity: .9;
+      }
+    }
+    @keyframes pageFromCenterToRight {
+      from {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+      to {
+        -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+        opacity: .9;
+      }
+    }
+    .page-from-center-to-left {
+      -webkit-animation: pageFromCenterToLeft 400ms forwards;
+              animation: pageFromCenterToLeft 400ms forwards;
+    }
+    .page-from-left-to-center {
+      -webkit-animation: pageFromLeftToCenter 400ms forwards;
+              animation: pageFromLeftToCenter 400ms forwards;
+    }
+    @-webkit-keyframes pageFromCenterToLeft {
+      from {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+      }
+      to {
+        opacity: 0.5;
+        -webkit-transform: translate3d(-20%, 0, 0);
+                transform: translate3d(-20%, 0, 0);
+      }
+    }
+    @keyframes pageFromCenterToLeft {
+      from {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+      }
+      to {
+        opacity: 0.5;
+        -webkit-transform: translate3d(-20%, 0, 0);
+                transform: translate3d(-20%, 0, 0);
+      }
+    }
+    @-webkit-keyframes pageFromLeftToCenter {
+      from {
+        opacity: .5;
+        -webkit-transform: translate3d(-20%, 0, 0);
+                transform: translate3d(-20%, 0, 0);
+      }
+      to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+      }
+    }
+    @keyframes pageFromLeftToCenter {
+      from {
+        opacity: .5;
+        -webkit-transform: translate3d(-20%, 0, 0);
+                transform: translate3d(-20%, 0, 0);
+      }
+      to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+      }
+    }
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <a v-link = "{ path: '/foo' }">Go to Foo</a>
+    <a v-link = "{ path: '/bar' }">Go to Bar</a>
+    <div class="spa">
+      <router-view :transition="transition" keep-alive></router-view>
+    </div>
+</div>
+    <script src="./main.js"></script>
+</body>
+</html>
