@@ -2,10 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
     <title>Document</title>
     <script src="./node_modules/vue/dist/vue.js"></script>
     <script src="./node_modules/vue-router/dist/vue-router.js"></script>
     <style>
+    html,body{
+      height: 100%;
+    }
+    body{
+      margin:0;
+    }
+    #app{
+      height: 100%;
+    }
+    nav{
+      position: fixed;
+      height: 50px;
+      top: 0;
+      width: 100%;
+      line-height: 50px;
+      text-align: center;
+    }
+    .wrap{
+      position:relative;
+      height: 100%;
+      margin-top: 50px;
+      color:#fff;
+    }
+    .change-page .v{
+      position: absolute;
+      top:0;
+      width: 100%;
+    }
+
+    .p1{background-color: #ff751a}
+    .p2{background-color: #6fc01d}
+    .p3{background-color: #31be4b}
+    .p4{background-color: #45a3e9}
+    .p5{background-color: #3D9970}
+
+    /*场景切换*/
     .page-enter {
         z-index: 20002;
         -webkit-animation: pageFromRightToCenter 800ms forwards;
@@ -139,11 +176,16 @@
     </style>
 </head>
 <body>
-<div id="app">
-    <a v-link = "{ path: '/foo' }">Go to Foo</a>
-    <a v-link = "{ path: '/bar' }">Go to Bar</a>
-    <div class="spa">
-      <router-view :transition="transition" keep-alive></router-view>
+<div id="app" :class="{'change-page':changePage}">
+    <nav>
+      <a v-link = "{ path: '/page1' }">页面一</a>
+      <a v-link = "{ path: '/page2' }">页面二</a>
+      <a v-link = "{ path: '/page3' }">页面三</a>
+      <a v-link = "{ path: '/page4' }">页面四</a>
+      <a v-link = "{ path: '/page5' }">页面五</a>
+    </nav>
+    <div class="wrap">
+      <router-view class="v" :transition="transition" keep-alive></router-view>
     </div>
 </div>
     <script src="./main.js"></script>
