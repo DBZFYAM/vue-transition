@@ -8,7 +8,7 @@ var page2 = Vue.extend({
 })
 
 var page3 = Vue.extend({
-    template: '<div class="p3">页面三<br/>页面三<br/>页面三<br/>页面三页面三<br/>页面三<br/>页面三<br/>页面三页面三<br/>页面三<br/>页面三<br/>页面三页面三<br/>页面三<br/>页面三<br/>页面三页面三<br/>页面三<br/>页面三<br/>页面三页面三<br/>页面三<br/>页面三<br/>页面三页面三<br/>页面三<br/>页面三<br/>页面三</div>'
+    template: '<div class="p3">页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三<br/>页面三</div>'
 })
 
 var page4 = Vue.extend({
