@@ -9,6 +9,7 @@
     <style>
     html,body{
       height: 100%;
+      overflow-x:hidden;
     }
     body{
       margin:0;
@@ -18,6 +19,8 @@
     }
     nav{
       position: fixed;
+      background-color: #fff;
+      z-index:1003;
       height: 50px;
       top: 0;
       width: 100%;
@@ -36,6 +39,10 @@
       width: 100%;
     }
 
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
     .p1{background-color: #ff751a}
     .p2{background-color: #6fc01d}
     .p3{background-color: #31be4b}
@@ -43,29 +50,25 @@
     .p5{background-color: #3D9970}
 
     /*场景切换*/
-    .page-enter {
-        z-index: 20002;
+    .next-enter {
+        z-index: 1002;
         -webkit-animation: pageFromRightToCenter 800ms forwards;
-        -o-animation: pageFromRightToCenter 800ms forwards;
         animation: pageFromRightToCenter 800ms forward
     }
-    .page-leave {
-        z-index: 2001;
+    .next-leave {
+        z-index: 1001;
         -webkit-animation: pageFromCenterToLeft 800ms forwards;
-        -o-animation: pageFromCenterToLeft 800ms forwards;
         animation: pageFromCenterToLeft 800ms forwards
     }
-    .page-back-enter {
-        z-index: 2001;
+    .prev-enter {
+        z-index: 1001;
         -webkit-animation: pageFromLeftToCenter 400ms forwards;
-        -o-animation: pageFromLeftToCenter 400ms forwards;
         animation: pageFromLeftToCenter 400ms forward
     }
-    .page-back-leave {
-        z-index: 20002;
+    .prev-leave {
+        z-index: 1002;
         -webkit-animation: pageFromCenterToRight 400ms forwards;
-        -o-animation: pageFromCenterToRight 400ms forwards;
-        animation: pageFromCenterToRight 400ms forwards
+        animation: pageFromCenterToRight 400ms forwards;
     }
 
     @-webkit-keyframes pageFromRightToCenter {
@@ -120,7 +123,7 @@
       -webkit-animation: pageFromCenterToLeft 400ms forwards;
               animation: pageFromCenterToLeft 400ms forwards;
     }
-    .page-from-left-to-center {
+    .page-from-left-to-center  {
       -webkit-animation: pageFromLeftToCenter 400ms forwards;
               animation: pageFromLeftToCenter 400ms forwards;
     }
@@ -178,14 +181,14 @@
 <body>
 <div id="app" :class="{'change-page':changePage}">
     <nav>
-      <a v-link = "{ path: '/page1' }">页面一</a>
+      <a v-link = "{ path: '/' }">首页</a>
       <a v-link = "{ path: '/page2' }">页面二</a>
       <a v-link = "{ path: '/page3' }">页面三</a>
       <a v-link = "{ path: '/page4' }">页面四</a>
       <a v-link = "{ path: '/page5' }">页面五</a>
     </nav>
     <div class="wrap">
-      <router-view class="v" :transition="transition" keep-alive></router-view>
+      <router-view class="v" :transition="effect" keep-alive></router-view>
     </div>
 </div>
     <script src="./main.js"></script>
