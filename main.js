@@ -1,10 +1,10 @@
 // Define some components
 var home = Vue.extend({
-    template: '<div class="p1">home<br/>home<br/>home<br/>homehome<br/>home<br/>home<br/>homehome<br/>home<br/>home<br/>homehome<br/>home<br/>home<br/>homehome<br/>home<br/>home<br/>homehome<br/>home<br/>home<br/>homehome<br/>home<br/>home<br/>homehome<br/>home<br/>home<br/>homehome<br/>home<br/>home<br/>homehome<br/>home<br/>home<br/>homehome<br/>home<br/>home<br/>homehome<br/>home<br/>home<br/>homehome<br/>home<br/>home<br/>homehome<br/>home<br/>home<br/>homehome<br/>home<br/>home<br/>homehome<br/>home<br/>home<br/>home</div>'
+    template: '<div class="p1">首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/>首页<br/></div>'
 })
 
 var page2 = Vue.extend({
-    template: '<div class="p2">页面二1<br/>页面二<br/>页面二2<br/>页面二3<br/>页面二4<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二</div>'
+    template: '<div class="p2">页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二<br/>页面二</div>'
 })
 
 var page3 = Vue.extend({
